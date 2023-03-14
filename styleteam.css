@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar-logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin: 0 10px;
+}
+
+.navbar-links a {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar-links a:hover {
+    color: #f8d04d;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    cursor: pointer;
+}
+
+.navbar-toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.2s ease-in-out;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .navbar-links.active {
+        display: block;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+}
+
+.page-header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.team-member {
+    margin: 20px;
+    text-align: center;
+    max-width: 400px;
+}
+
+.team-member img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h2 {
+    margin-top: 10px;
+}
+
+.team-member h3 {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
